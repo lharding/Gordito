@@ -85,6 +85,8 @@ Templates are compiled to .inc files named after the input file names. To use, s
 	    include(self::$TEMPLATES.$filename);
     }
 
+Using the localization substitution mechanism in PHP will cause the $this->getIString() to be called with the string identifier and the current context object.
+
 Roadmap
 -------
 
