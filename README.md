@@ -4,7 +4,7 @@ Gordito
 An even faster (and possibly easier) Mustache Rendering Tool
 ------------------------------------------------------------
 
-Gordito is an implementation of a subset of the [Mustache][1] templating language. Rather than interpreting templates at runtime, it transpiles your templates to executable Javascript or PHP code for maximum performance.
+Gordito is an implementation of a subset of the [Mustache](https://github.com/janl/mustache.js/) templating language. Rather than interpreting templates at runtime, it transpiles your templates to executable Javascript or PHP code for maximum performance.
 
 This should be considered to be a "developer preview" style release - although the API isn't expected to change significantly, only a limited subset of mustache is implemented (although, we find this sufficient to render the new Yahoo! Address Book).
 
@@ -41,12 +41,12 @@ To transpile your templates, run the translate_mustache.py script. You will need
 
 The available options are as follows:
 
--f, --f           The mustache template to process
--r, --rollup      Rollup this template and it's dependencies into a single file.
--o, --output      The output file of this generated template
--b, --basepath    Directory in which to search for partials
--d, --baseoutpath Directory to place output in. Overridden by -o, but not for partials.
--t, --type        Whether to output Javascript or PHP [must be 'php' or 'js']
+	-f, --f           The mustache template to process
+	-r, --rollup      Rollup this template and it's dependencies into a single file.
+	-o, --output      The output file of this generated template
+	-b, --basepath    Directory in which to search for partials
+	-d, --baseoutpath Directory to place output in. Overridden by -o, but not for partials.
+	-t, --type        Whether to output Javascript or PHP [must be 'php' or 'js']
 
 Outputting JS creates a YUI module per file. Inspecting the code should make it obvious how to replace this with your favorite flavor of JS module system.
 
@@ -98,5 +98,3 @@ Legalese
 Copyright (c) 2012 Yahoo! Inc.  All rights reserved.  
 Copyrights licensed under the MIT License. See the accompanying LICENSE file
 for terms.
-
-[1] https://github.com/janl/mustache.js/ "Mustache.js"
